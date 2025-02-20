@@ -17,7 +17,7 @@ const VideoChat = () => {
 
   // Initialize Socket.IO connection
   useEffect(() => {
-    const newSocket = io('http://10.1.58.223:5000');
+    const newSocket = io('http://127.0.0.1:5000');
     setSocket(newSocket);
 
     newSocket.on('connect', () => {
@@ -60,7 +60,7 @@ const VideoChat = () => {
     const imageCapture = new ImageCapture(videoTrack);
 
     // Create WebSocket connection to emotion detection API
-    const websocket = new WebSocket("ws://10.1.58.223:8000/ws/emotion-detection"); 
+    const websocket = new WebSocket("ws://127.0.0.1:8000/ws/emotion-detection"); 
 
     websocket.onopen = () => {
       console.log("WebSocket connection to emotion API established");

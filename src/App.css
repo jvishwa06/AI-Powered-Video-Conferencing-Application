@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+.video-chat {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fc;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.video-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border: 3px solid #1d72b8;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #1d72b8;
   color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #156a9d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+textarea {
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 14px;
+  resize: none;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #1d72b8;
+}
+
+.emotion-display {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 8px;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 20px;
+  color: #b91a1a;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-align: center; /* Centering the title */
+  justify-content: center; /* Centering the title */
+  width: 100%; /* Ensures the title takes up the full width */
+}
+
+h2 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  text-align: center; /* Centering the title */
+  width: 100%; /* Ensures the title takes up the full width */
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  video {
+    max-width: 90%;
+  }
+
+  .controls button {
+    width: 100%;
+  }
+
+  .emotion-display {
+    max-width: 90%;
+  }
+
+  textarea {
+    max-width: 90%;
   }
 }
