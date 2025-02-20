@@ -129,7 +129,10 @@ const VideoChat = () => {
 
     peer.on("signal", (data) => {
       console.log("Signal data:", JSON.stringify(data));
-      alert("Share this signal with your peer:\n" + JSON.stringify(data));
+      // alert("Share this signal with your peer:\n" + JSON.stringify(data));
+      navigator.clipboard.writeText(JSON.stringify(data))
+        .then(() => alert("Signal copied to clipboard! Share it with your peer."))
+        .catch((err) => console.error("Failed to copy: ", err));
     });
 
     peer.on("stream", (stream) => {
@@ -161,8 +164,12 @@ const VideoChat = () => {
       });
 
       peer.on("signal", (data) => {
+        // var dataSignal = JSON.stringify(data);
         console.log("Signal data:", JSON.stringify(data));
-        alert("Share this signal with your peer:\n" + JSON.stringify(data));
+        // alert("Share this signal with your peer:\n" + JSON.stringify(data));
+        navigator.clipboard.writeText(JSON.stringify(data))
+        .then(() => alert("Signal copied to clipboard! Share it with your peer."))
+        .catch((err) => console.error("Failed to copy: ", err));
       });
 
       peer.on("stream", (stream) => {
