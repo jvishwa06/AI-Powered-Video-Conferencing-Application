@@ -2,6 +2,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f7fc;
   padding: 20px;
+  margin-top: 50px;
   border-radius: 8px;
   max-width: 1000px;
   margin: 0 auto;
@@ -11,6 +12,7 @@
 .video-container {
   display: flex;
   justify-content: space-evenly;
+  /* margin-top: 30px; */
   margin-bottom: 20px;
 }
 
@@ -25,7 +27,7 @@ video {
 
 .controls {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 button {
@@ -79,7 +81,8 @@ textarea:focus {
 h3 {
   font-size: 20px;
   color: #333;
-  /* margin-left: 60px; */
+  margin-top: 60px;
+  margin-bottom: 60px;
   text-align: center; /* Centering the title */
   justify-content: center; /* Centering the title */
   width: 100%;
